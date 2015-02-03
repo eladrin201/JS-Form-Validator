@@ -1,0 +1,132 @@
+<form class="form-horizontal" action="/form/appointments" data-redirect="/thanks.html" data-email="your email address">
+  <fieldset>
+    <!-- Error Notification -->
+    <div id="error" class="alert alert-danger hidden" role="alert"></div>
+
+    <!-- Form Name -->
+    <legend><h3 class="text-center">Request Appointment</h3></legend>
+
+    <!-- Text input -->
+    <input type="text" class="hide" id="Name" name="Name" placeholder="Full Name">
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="name">Name <span style="color:#ff0000;">*</span></label>
+      <div class="col-md-4">
+        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" required="">
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="phone">Phone <span style="color:#ff0000;">*</span></label>
+      <div class="col-md-4">
+        <input id="phone" name="phone" type="tel" placeholder="Phone number" class="form-control input-md" required="">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="email">Email <span style="color:#ff0000;">*</span></label>
+      <div class="col-md-4">
+        <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md" required="">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="aptDate">Appointment Date <span style="color:#ff0000;">*</span></label>
+      <div class="col-md-4">
+        <input id="aptDate" name="aptDate" type="text" placeholder="Appointment date" class="form-control input-md" required="">
+        <span class="help-block">Select requested date</span>
+      </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="aptTime">Appointment Time <span style="color:#ff0000;">*</span></label>
+      <div class="col-md-4">
+        <select id="aptTime" name="aptTime" class="form-control">
+          <option value="--">--</option>
+          <option value="9:00 AM">9:00 AM</option>
+          <option value="9:30 AM">9:30 AM</option>
+          <option value="10:00 AM">10:00 AM</option>
+          <option value="10:30 AM">10:30 AM</option>
+          <option value="11:00 AM">11:00 AM</option>
+          <option value="11:30 AM">11:30 AM</option>
+          <option value="12:00 PM">12:00 PM</option>
+          <option value="12:30 PM">12:30 PM</option>
+          <option value="1:00 PM">1:00 PM</option>
+          <option value="1:30 PM">1:30 PM</option>
+          <option value="2:00 PM">2:00 PM</option>
+          <option value="2:30 PM">2:30 PM</option>
+          <option value="3:00 PM">3:00 PM</option>
+          <option value="3:30 PM">3:30 PM</option>
+          <option value="4:00 PM">4:00 PM</option>
+          <option value="4:30 PM">4:30 PM</option>
+          <option value="5:00 PM">5:00 PM</option>
+          <option value="5:30 PM">5:30 PM</option>
+          <option value="6:00 PM">6:00 PM</option>
+          <option value="6:30 PM">6:30 PM</option>
+        </select>
+        <span class="help-block">Select requested time</span>
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="stylist">Preferred Stylist</label>
+      <div class="col-md-4">
+        <input id="stylist" name="stylist" type="text" placeholder="Preferred Stylist" class="form-control input-md">
+        <span class="help-block">Leave blank if you have no preference</span>
+      </div>
+    </div>
+
+    <!-- Multiple Checkboxes -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="services">Desired Service(s) <span style="color:#ff0000;">*</span></label>
+      <div class="col-md-4">
+        <div class="checkbox">
+          <label for="services">
+            <input type="checkbox" name="services" id="services" value="Service 1">Service 1
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="services">
+            <input type="checkbox" name="services" id="services" value="Service 2">Service 2
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="services">
+            <input type="checkbox" name="services" id="services" value="Service 3">Service 3
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="services">
+            <input type="checkbox" name="services" id="services" value="Service 4">Service 4
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="comment">Comments</label>
+      <div class="col-md-4">
+        <textarea class="form-control" id="comment" name="comment" rows="5">Comments (Optional)</textarea>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="submit"></label>
+      <div class="col-md-4">
+        <button type="button" onclick="validateForm()" class="btn btn-default">Button</button>
+        <p class="help-block"><span style="color:#ff0000;">*</span> Required Field</p>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
